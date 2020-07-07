@@ -1,0 +1,596 @@
+.header-container {
+    height: 140px;
+    background-color: #eceded;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.header-item {
+    /* border: 1px solid black; */
+    flex-basis: 40%;
+    /* text-align: center; */
+    /* align-content: center; */
+}
+
+.header-item-agent {
+    /* border: 1px solid greenyellow; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-item-wlcm {
+    /* display: flex;
+    justify-content: flex-end; */
+}
+
+.header-item-wlcm>img {
+    margin-top: 30px;
+    width: 250px;
+    margin-right: 10px;
+    padding: 14px;
+}
+
+.header-item-profile {
+    /* margin-left: auto; */
+    padding: 20px;
+}
+
+.header-item-avatar {}
+
+.header-item-avatar>img {
+    margin-top: 20px;
+    border-radius: 50%;
+    width: 90px;
+}
+
+.agent {
+    display: block;
+    font-weight: bold;
+    padding: 8px;
+    margin-left: 5px;
+}
+
+.agent-name {
+    margin-top: 25px;
+}
+
+.text-small {
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.header-item-mark {
+    display: flex;
+    justify-content: start;
+    margin-left: 30px;
+}
+
+.header-item .mark1 {
+    /* padding : 0.4em;
+    max-width: 32px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-right: auto;
+}
+
+.mark-lbl {
+    text-align: center;
+    padding: 5px;
+}
+
+.progress-bar {
+    background-color: green;
+}
+
+.progress {
+    height: 6px;
+    background: #bebec5;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: visible;
+    position: relative;
+    width: 260px;
+    margin: 0 auto 30px auto;
+}
+
+.progress:before, .progress:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    z-index: 1;
+}
+
+.progress:after {
+    border: 7px solid #bebec5;
+    left: auto;
+    right: 0;
+}
+
+.progress .progress-bar {
+    box-shadow: none;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    -webkit-animation: animate-positive 1s;
+    animation: animate-positive 1s;
+}
+
+.progress .progress-value {
+    width: 70px;
+    height: 35px;
+    line-height: 27px;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    position: absolute;
+    top: -12px;
+    right: 0;
+    z-index: 2;
+}
+
+.progress.orange:before {
+    border: 7px solid green;
+}
+
+.progress.blue:before {
+    border: 7px solid #1a4966;
+}
+
+.progress.green:before {
+    border: 7px solid #53aa2c;
+}
+
+.progress.purple:before {
+    border: 7px solid #66406f;
+}
+
+.progress.orange .progress-value {
+    border: 5px solid #fe3b3b;
+    color: #fe3b3b;
+}
+
+.progress.blue .progress-value {
+    border: 5px solid #1a4966;
+    color: #1a4966;
+}
+
+.progress.green .progress-value {
+    border: 5px solid #53aa2c;
+    color: #53aa2c;
+}
+
+.progress.purple .progress-value {
+    border: 5px solid #66406f;
+    color: #66406f;
+}
+
+@-webkit-keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+.icon-nav-bar {
+    width: 80px;
+    margin-top: 20px;
+    border-radius: 0 20px 20px 0;
+    background-color: grey;
+    position: absolute;
+    top: 160px;
+    left: 0px;
+}
+
+.icon-nav-bar img {
+    width: 60px;
+    padding: 6px;
+  
+}
+
+.icon-nav-bar>ul {
+    margin-left: -40px;
+}
+
+.icon-nav-bar>ul>li {
+    list-style: none;
+    padding: 5px;
+}
+
+.call-to-action {
+    position: absolute;
+    bottom: 300px;
+    left: 12px;
+}
+
+.call-to-action img {
+    width: 64px;
+  
+    /* -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc; */
+    /* -moz-border-radius: 190px;
+    -webkit-border-radius: 190px;
+    border-radius: 190px; */
+}
+
+.main-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.project-showcase {
+    text-align: center;
+    background-color: #5f7463;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    height: 140px;
+}
+
+.img-proj>img {
+    max-width: 1240px;
+    margin-bottom: 30px;
+}
+
+.img-proj-title {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    color: white;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.project-desc {
+    display: flex;
+}
+
+.project-desc .proj-explain {
+    flex: 4;
+    width: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.project-desc .comp-logo {
+    flex: 1;
+}
+
+.project-desc .comp-logo img {
+    margin-top: 20px;
+    width: 96px;
+    padding-top: 10px;
+}
+
+.project-desc .proj-explain {
+    margin-top: 20px;
+}
+
+.project-desc .proj-explain ul {
+    display: flex;
+    padding-top: 10px;
+}
+
+.project-desc .proj-explain ul li {
+    list-style: none;
+    padding: 6px;
+}
+
+.proj-details {
+    display: flex;
+    flex-basis: 25%;
+    color: whitesmoke;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.proj-details-about {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-details-about .about-us {
+    width: 140px;
+    height: 180px;
+    border: 2px solid white;
+    margin-bottom: 30px;
+}
+
+.proj-details-about .about-us p {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 40%;
+    padding: 2px 16px;
+}
+
+.proj-details-pricing {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid white; */
+    align-items: center;
+}
+
+.proj-details .proj-details-pricing .address {
+    color: lightgray;
+    font-size: 12px;
+    /* padding: 1px 3px 0px 3px; */
+    line-height: 1px;
+    text-align: left;
+}
+
+.proj-details .proj-details-pricing .price {
+    /* margin-top: 16px;
+    margin-bottom: 16px; */
+}
+
+.proj-details .proj-details-pricing .price p {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px 3px 0px 3px;
+    line-height: 1px;
+    text-align: left;
+}
+
+.proj-details .proj-details-pricing .feature {
+    display: flex;
+}
+
+.proj-details .proj-details-pricing .feature img {
+    width: auto;
+    height: 36px;
+    margin: 2px 10px;
+}
+
+.proj-details .proj-details-pricing .feature span {
+    display: block;
+}
+
+.proj-details-locate {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-details .proj-details-locate .proj-details-content p {
+    text-align: left;
+    padding: 0px 50px 20px 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.proj-facilities {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    /* padding: 5px; */
+    align-items: center;
+}
+
+.proj-facilities p {
+    margin-top: 10px;
+}
+
+.proj-facilities img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+.proj-highlight {
+    text-align: center;
+}
+
+.proj-phase {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 200px;
+    background-color: #5f7463;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 25px;
+}
+
+.proj-amenities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+.proj-amenities-item {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+}
+
+/* .proj-amenities-item span {
+    padding-left: 5px;
+    margin-top: 10px;
+} */
+
+.proj-amenities-item img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.proj-map {
+    text-align: center;
+    background-color: #5f7463;
+    margin-top: 40px;
+    height: 550px;
+}
+
+.proj-map .proj-map-label {
+    color: white;
+    font-size: 24px;
+    padding: 25px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-map .proj-map-label img {
+    width: auto;
+    height: 24px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.proj-gmap {
+    display: flex;
+    justify-content: center;
+}
+
+.proj-gmap mapouter {
+    text-align: center;
+}
+
+.nearby-amenities {
+    background-color: #e3e2d3;
+    height: 400px;
+}
+
+.nearby-amenities-label {
+    color: black;
+    text-align: center;
+    padding: 20px 5px 20px 5px;
+    font-size: 24px;
+}
+
+.nearby-amenities-details {
+    display: flex;
+    flex-basis: 30%;
+    justify-content: space-around;
+}
+
+.nearby-amenities-item {
+    /* border: 1px solid white; */
+}
+
+.nearby-amenities-item img {
+    width: 60px;
+    height: 50px;
+    text-align: center;
+}
+
+.nearby-amenities-item span {
+    display: block;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.proj-galleries {
+    text-align: center;
+    /* margin-top: 40px; */
+    height: 550px;
+}
+
+.proj-galleries .proj-galleries-label {
+    color: black;
+    font-size: 24px;
+    padding: 25px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-galleries .proj-galleries-label img {
+    width: auto;
+    height: 24px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.proj-vt {
+    text-align: center;
+    /* margin-top: 40px; */
+    height: 350px;
+}
+
+.proj-vt .proj-vt-label {
+    color: black;
+    font-size: 22px;
+    padding: 25px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-vt .proj-vt-label img {
+    width: auto;
+    height: 22px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.unit-type-plan {
+    text-align: center;
+    /* margin-top: 40px; */
+    height: 550px;
+}
+
+.unit-type-plan .unit-type-plan-label {
+    color: black;
+    font-size: 22px;
+    padding: 25px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.unit-type-plan .unit-type-plan-label img {
+    width: auto;
+    height: 22px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.mortgage-calc {
+    text-align: center;
+    /* margin-top: 40px; */
+    height: 550px;
+}
+
+.mortgage-calc .mortgage-calc-label {
+    color: black;
+    font-size: 22px;
+    padding: 25px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.mortgage-calc .mortgage-calc-label img {
+    width: auto;
+    height: 22px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.developer-info {
+    background-color: gray;
+    height: 300px;
+}
+
+#footer {
+    background-color: black;
+    height: 60px;
+}
