@@ -641,6 +641,12 @@ dl dd {
   margin-bottom: 10px;
 }
 
+.unitInfo-instalment-container {
+  background-color: rgb(237, 237, 237);
+  margin: 10px auto;
+  padding: 20px 0;
+}
+
 .mortgage-container {
   display: flex;
   background-color: #ededed;
