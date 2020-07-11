@@ -401,6 +401,64 @@
                 <p>MORTGAGE CALCULATOR</p>
                 <img src="./assets/img/icon-share.png" />
             </div>
+            <div class="row">
+                <div class="mortgage-container">
+                    <div class="mortgage-container-group">
+                        <div class="title">
+                            SPA Price
+                        </div>
+                        <div class="input">
+                            <input type='currency' value="" placeholder='RM' />
+                        </div>
+                    </div>
+                    <div class="mortgage-container-group">
+                        <div class="title">
+                            Downpayment
+                        </div>
+                        <div class="input">
+                            <input type='currency' value="" placeholder='RM' />
+                        </div>
+                    </div>
+                    <div class="mortgage-container-group">
+                        <div class="title">
+                            Loan Amount
+                        </div>
+                        <div class="input">
+                            <input type='currency' value="650000" placeholder='RM' />
+                        </div>
+                    </div>
+                    <div class="mortgage-container-group">
+                        <div class="mortgage-container-group-sub">
+                            <div class="title" style="flex: 50%;">
+                                Loan Rate
+                            </div>
+                            <div class="input" style="flex: 50%;">
+                                <input type='loanRate' placeholder='%' />
+                            </div>
+                        </div>
+                        <div class="mortgage-container-group-sub">
+                            <div class="title" style="flex: 50%;">
+                                Tenure
+                            </div>
+                            <div class="input" style="flex: 50%;">
+                                <input type="number" min="0" max="10000" step="1" value="" placeholder="Year" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mortgage-container-group">
+                        <div class="title">
+                            Monthly Installment
+                        </div>
+                        <div class="input" style="font-weight:bold;font-size:35px;text-align:left;">
+                            RM4,700.00
+                        </div>
+                    </div>
+                    <div class="mortgage-container-buttonGroup">
+                        <button class="emailButton btn btn-secondary">Reply to my agent &nbsp;<i
+                                class="fa fa-envelope-o fa-2x"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="developer-info"></div>
@@ -419,6 +477,66 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        var currency = 'MYR' // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+        var currencyInputs = document.querySelectorAll('input[type="currency"]')
+
+        // format inital value
+        currencyInputs.forEach(function (item) {
+            onBlur({ target: item })
+        });
+
+        // bind event listeners
+        currencyInputs.forEach(function (item) {
+            item.addEventListener('focus', onFocus)
+            item.addEventListener('blur', onBlur)
+        });
+
+
+        function localStringToNumber(s) {
+            return Number(String(s).replace(/[^0-9.-]+/g, ""))
+        }
+
+        function onFocus(e) {
+            var value = e.target.value;
+            e.target.value = value ? localStringToNumber(value) : ''
+        }
+
+        function onBlur(e) {
+            var value = e.target.value
+
+            var options = {
+                maximumFractionDigits: 2,
+                currency: currency,
+                style: "currency",
+                currencyDisplay: "symbol"
+            }
+            e.target.value = value
+                ? localStringToNumber(value).toLocaleString('en-MY', options)
+                : ''
+        }
+
+        //Percentage 
+        var loanRateInputs = document.querySelectorAll('input[type="loanRate"]')
+
+        // format inital value
+        loanRateInputs.forEach(function (item) {
+            onBlur({ target: item })
+        });
+
+        // bind event listeners
+        loanRateInputs.forEach(function (item) {
+            item.addEventListener('focus', onFocus)
+            item.addEventListener('blur', onBlurLoanRate)
+        });
+
+        function onBlurLoanRate(e) {
+            var value = e.target.value
+            if (!value) return;
+            value = Number(String(value).replace(/[^0-9.-]+/g, ""))
+            e.target.value = value + "%"
+        }
+    </script>
 </body>
 
 </html>
